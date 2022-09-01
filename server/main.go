@@ -105,7 +105,7 @@ func httpRun() error {
 
 func main() {
 	var closer io.Closer
-	tracer, closer = tracing.InitTrace("Greet", "172.28.5.39:6831")
+	tracer, closer = tracing.InitTrace("Greet", "127.0.0.1:6831")
 	defer closer.Close()
 	opentracing.SetGlobalTracer(tracer)
 
